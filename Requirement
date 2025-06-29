@@ -1,0 +1,6 @@
+langgraph>=0.0.20
+langchain>=0.1.20
+openai>=1.30.0
+graphviz>=0.20.1
+python-dotenv  # If you manage OpenAI keys via .env
+tqdm           # For CLI progress bars (optional)
