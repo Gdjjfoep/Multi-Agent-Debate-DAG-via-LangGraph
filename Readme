@@ -1,0 +1,47 @@
+Multi-Agent Debate DAG using LangGraph
+ATG Technical Assignment — Machine Learning Intern Deliverable
+
+This project implements a CLI-based multi-agent debate system using LangGraph, simulating a structured argument between two AI personas (e.g., Scientist vs Philosopher) over a fixed user-provided topic. The debate is orchestrated as a Directed Acyclic Graph (DAG), managing turn-taking, memory control, and final evaluation by a judging node.
+
+🚀 Features
+Two AI agents engage in 8-round structured debate (4 turns each).
+
+Topic input via CLI from user.
+
+MemoryNode stores contextual memory (not shared across agents).
+
+JudgeNode summarizes debate and declares a winner with rationale.
+
+All transitions and messages logged to file.
+
+DAG visualized using Graphviz or LangGraph visualization tools.
+
+🧩 DAG Node Structure
+📥 UserInputNode
+Accepts the debate topic from user via CLI.
+
+🧑‍🔬 AgentA (e.g., Scientist)
+Takes alternate turns to present arguments.
+
+Receives contextual memory but no shared transcript.
+
+🧠 MemoryNode
+Maintains and updates structured debate memory.
+
+Ensures agents only access relevant memory (not each other's arguments).
+
+🧙 AgentB (e.g., Philosopher)
+Opponent persona with alternate viewpoints.
+
+Responds and builds upon AgentA’s arguments logically.
+
+⚖️ JudgeNode
+Reviews debate flow, argument memory.
+
+Generates:
+
+Complete summary
+
+Declares winner
+
+Justifies decision logically
